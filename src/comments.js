@@ -1,4 +1,4 @@
-export const comments = [
+const comments = [
     {
         "postId": 1,
         "id": 1,
@@ -3499,4 +3499,6 @@ export const comments = [
         "email": "Emma@joanny.ca",
         "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     }
-];
+]
+
+export default comments;
