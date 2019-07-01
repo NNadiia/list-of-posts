@@ -26,7 +26,7 @@ class App extends React.Component {
             return {
                 ...post,
                 user: users.find(user => user.id === post.userId),
-                comment: comments.find(comment => comment.postId === post.id)
+                comments: comments.filter(comment => comment.postId === post.id)
             }
         })
     };

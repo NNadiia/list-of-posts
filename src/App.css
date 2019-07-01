@@ -31,3 +31,10 @@
     transform: rotate(360deg);
   }
 }
+postlist {
+  margin-top: 10px;
+}
+ comment{
+    margin-bottom: 20px;
+    padding: 10px;
+}

@@ -1,13 +1,17 @@
 import React from "react";
+import Comment from "./Comment";
 
 function Post(props) {
     return (
-        <li>
-            {props.post.title}
-            <b>{props.post.user.name}</b>
+        <li className="post">
+            Title: {props.post.title} <br/>
+            Post: {props.post.body}<br/>
+            Author: {props.post.user.name}<br/>
+            Email: {props.post.user.email} <br/>
+            Comments: {props.post.comments.map(comment =>(
+            <Comment key={comment.id} comment={comment} />))}
         </li>
     )
 }
-
 
 export default Post;

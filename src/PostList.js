@@ -4,7 +4,7 @@ import Post from "./Post";
 
 function Postlist(props) {
     return (
-        <ul>
+        <ul className="postlist">
             {props.posts.map(post => (
                 <Post key={post.id} post={post}/>))}
         </ul>
