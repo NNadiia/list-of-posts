@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import users from './users.js';
+import posts from './posts.js';
+import { comments } from './comments.js';
+import PostList from './PostList.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>List of posts</h1>
+        <PostList posts={posts} users={users} comments={comments} />
     </div>
   );
 }
