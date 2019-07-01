@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -17,6 +14,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
 }
 
 .App-link {
@@ -31,10 +29,9 @@
     transform: rotate(360deg);
   }
 }
-postlist {
+.postlist {
   margin-top: 10px;
 }
- comment{
+ .post{
     margin-bottom: 20px;
-    padding: 10px;
 }
