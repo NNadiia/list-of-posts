@@ -4,6 +4,7 @@ import posts from './posts.js';
 import comments from './comments.js';
 import PostList from './PostList.js';
 import './App.css';
+import {loadComments, loadPosts, loadUsers} from "./api";
 
 
 class App extends React.Component {
@@ -15,9 +16,14 @@ class App extends React.Component {
         };
     }
 
-    componentDidMount() {
+    async componentDidMount() {
+        const posts = await loadPosts();
+        const users = await loadUsers();
+        const comments = await loadComments();
+        const items =  this.listOfPostsWithParameters(posts, users, comments);
+
         this.setState({
-            posts: this.listOfPostsWithParameters(posts, users, comments)
+            posts: items,
         });
     }
 
@@ -33,12 +39,12 @@ class App extends React.Component {
 
 
     render() {
-        const {posts} = this.state;
+        const { posts } = this.state;
 
         return (
             <div className="App">
                 <h1>List of posts</h1>
-                <PostList posts={posts}/>
+                <PostList items={posts}/>
             </div>
         )
     }
