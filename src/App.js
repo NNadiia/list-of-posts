@@ -13,21 +13,24 @@ class App extends React.Component {
 
         this.state = {
             posts: [],
-        };
+            isLoaded: false,
+         };
     }
 
-    async componentDidMount() {
+    async loadData(){
         const posts = await loadPosts();
         const users = await loadUsers();
         const comments = await loadComments();
         const items =  this.listOfPostsWithParameters(posts, users, comments);
 
-        this.setState({
+       this.setState({
             posts: items,
+            isLoaded: true,
         });
     }
 
     listOfPostsWithParameters(posts, users, comments) {
+
         return posts.map(post => {
             return {
                 ...post,
@@ -39,13 +42,19 @@ class App extends React.Component {
 
 
     render() {
-        const { posts } = this.state;
+       const { posts, isLoaded } = this.state;
 
         return (
-            <div className="App">
+            <main className="App">
                 <h1>List of posts</h1>
-                <PostList items={posts}/>
-            </div>
+                {isLoaded ?
+                    <PostList items={posts} /> :
+                    <button
+                        onClick={() => this.loadData()}>
+                        Button
+                    </button>
+                }
+            </main>
         )
     }
 }
