@@ -4,8 +4,8 @@ function Comment(props) {
     return (
         <ul className="comment">
         <li>
-           Name: {props.comment.name} <br/>
-           Email: {props.comment.email} <br/>
+           <span>Name: </span>{props.comment.name} <br/>
+            <span>Email: </span> {props.comment.email} <br/>
          </li>
         </ul>
     )

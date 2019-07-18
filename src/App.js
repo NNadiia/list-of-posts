@@ -46,12 +46,13 @@ class App extends React.Component {
 
         return (
             <main className="App">
-                <h1>List of posts</h1>
+                <h1>Dynamic list of posts</h1>
                 {isLoaded ?
                     <PostList items={posts} /> :
-                    <button
-                        onClick={() => this.loadData()}>
-                        Button
+                    <button className="button"
+                        onClick={() => this.loadData()}
+                        disabled={isLoaded}>
+                        {isLoaded ? 'Loading...' : 'Show list'}
                     </button>
                 }
             </main>
