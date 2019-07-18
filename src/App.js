@@ -1,26 +1,63 @@
 import React from 'react';
-import logo from './logo.svg';
+import users from './users.js';
+import posts from './posts.js';
+import comments from './comments.js';
+import PostList from './PostList.js';
 import './App.css';
+import {loadComments, loadPosts, loadUsers} from "./api";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            posts: [],
+            isLoaded: false,
+         };
+    }
+
+    async loadData(){
+        const posts = await loadPosts();
+        const users = await loadUsers();
+        const comments = await loadComments();
+        const items =  this.listOfPostsWithParameters(posts, users, comments);
+
+       this.setState({
+            posts: items,
+            isLoaded: true,
+        });
+    }
+
+    listOfPostsWithParameters(posts, users, comments) {
+
+        return posts.map(post => {
+            return {
+                ...post,
+                user: users.find(user => user.id === post.userId),
+                comments: comments.filter(comment => comment.postId === post.id)
+            }
+        })
+    };
+
+
+    render() {
+       const { posts, isLoaded } = this.state;
+
+        return (
+            <main className="App">
+                <h1>Dynamic list of posts</h1>
+                {isLoaded ?
+                    <PostList items={posts} /> :
+                    <button className="button"
+                        onClick={() => this.loadData()}
+                        disabled={isLoaded}>
+                        {isLoaded ? 'Loading...' : 'Show list'}
+                    </button>
+                }
+            </main>
+        )
+    }
 }
 
 export default App;
