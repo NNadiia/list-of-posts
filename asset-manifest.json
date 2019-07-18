@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mate-academy/react_dynamic-list-of-posts/static/css/main.51453ab8.chunk.css",
-    "main.js": "/mate-academy/react_dynamic-list-of-posts/static/js/main.d478cd7d.chunk.js",
-    "main.js.map": "/mate-academy/react_dynamic-list-of-posts/static/js/main.d478cd7d.chunk.js.map",
-    "runtime~main.js": "/mate-academy/react_dynamic-list-of-posts/static/js/runtime~main.0c07e2d9.js",
-    "runtime~main.js.map": "/mate-academy/react_dynamic-list-of-posts/static/js/runtime~main.0c07e2d9.js.map",
-    "static/js/2.3700d4c4.chunk.js": "/mate-academy/react_dynamic-list-of-posts/static/js/2.3700d4c4.chunk.js",
-    "static/js/2.3700d4c4.chunk.js.map": "/mate-academy/react_dynamic-list-of-posts/static/js/2.3700d4c4.chunk.js.map",
-    "index.html": "/mate-academy/react_dynamic-list-of-posts/index.html",
-    "precache-manifest.2f74fba397c941d21fdd44c44809292e.js": "/mate-academy/react_dynamic-list-of-posts/precache-manifest.2f74fba397c941d21fdd44c44809292e.js",
-    "service-worker.js": "/mate-academy/react_dynamic-list-of-posts/service-worker.js",
-    "static/css/main.51453ab8.chunk.css.map": "/mate-academy/react_dynamic-list-of-posts/static/css/main.51453ab8.chunk.css.map"
+    "main.css": "/list-of-posts/static/css/main.51453ab8.chunk.css",
+    "main.js": "/list-of-posts/static/js/main.d478cd7d.chunk.js",
+    "main.js.map": "/list-of-posts/static/js/main.d478cd7d.chunk.js.map",
+    "runtime~main.js": "/list-of-posts/static/js/runtime~main.9377e6ff.js",
+    "runtime~main.js.map": "/list-of-posts/static/js/runtime~main.9377e6ff.js.map",
+    "static/js/2.3700d4c4.chunk.js": "/list-of-posts/static/js/2.3700d4c4.chunk.js",
+    "static/js/2.3700d4c4.chunk.js.map": "/list-of-posts/static/js/2.3700d4c4.chunk.js.map",
+    "index.html": "/list-of-posts/index.html",
+    "precache-manifest.fb0baab6bb18c5fc3e9149931f6684f9.js": "/list-of-posts/precache-manifest.fb0baab6bb18c5fc3e9149931f6684f9.js",
+    "service-worker.js": "/list-of-posts/service-worker.js",
+    "static/css/main.51453ab8.chunk.css.map": "/list-of-posts/static/css/main.51453ab8.chunk.css.map"
   }
 }
